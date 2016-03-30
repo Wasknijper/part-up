@@ -60,9 +60,9 @@ start() {
     fi
 
     echo "Using a Meteor git checkout."
-    METEOR="$METEOR_SRC/meteor"
+    METEOR="$METEOR_SRC/meteor.bat"
   else
-    METEOR="meteor"
+    METEOR="meteor.bat"
   fi
 
 
@@ -75,7 +75,7 @@ start() {
   else
     cd "$APP"
     echo "Starting your app in $NODE_ENV."
-    local CMD="$METEOR --settings ../$settings_file"
+    local CMD="$METEOR --settings ../$settings_file --port 3030"
     echo "$CMD"
     eval $CMD
   fi
