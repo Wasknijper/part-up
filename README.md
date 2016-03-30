@@ -178,7 +178,7 @@ For this I followed this [tutorial](http://www.jeffgeerling.com/blog/running-ans
 
 ##Step 3: Decrypting the files
 Now go to the config/development directory in the cygwin/babun terminal.
-Instead of running ./decrypt #password, you should run ansible-vault decrypt. 
+Instead of running `./decrypt #password`, you should run `ansible-vault decrypt`. 
 It will ask for the password and after it should be decrypted.
 
 ##Step 4: Getting Meteor to work
