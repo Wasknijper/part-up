@@ -159,3 +159,81 @@ are provided), that licensees may convey the work under this License, and
 how to view a copy of this License. If the interface presents a list of user
 commands or options, such as a menu, a prominent item in the list meets this
 criterion.
+
+-------
+
+#Running part-up on Windows
+
+##Step 1: Download Cygwin and Meteor
+
+Ansible doesnt run on windows, however, it does on Linux. With Cygwin you can run (some) native linux apps on windows. Luckily for us, Ansible is one of those apps.
+[Download here](https://www.cygwin.com/). Just install it with the basic options.
+
+Now, I'm not a fan on the cygwin terminal, so I also downloaded [babun](http://babun.github.io/). This is optional, so everything should work if you don't.
+
+Also, since its a meteor app, having that installed in necesarry too.
+
+##Step 2: Installing Ansible
+For this I followed this [tutorial](http://www.jeffgeerling.com/blog/running-ansible-within-windows) by Jeff Geerling, starting at step 3.
+
+##Step 3: Decrypting the files
+Now go to the config/development directory in the cygwin/babun terminal.
+Instead of running ./decrypt #password, you should run ansible-vault decrypt. 
+It will ask for the password and after it should be decrypted.
+
+##Step 4: Getting Meteor to work
+Now, if you continue trying to start the app by going to the main directory and running ./start, you'll probably get the error meteor: command not found, even if you have meteor installed. This is because the shell doesn't know you want to use this plugin yet. 
+
+Luckily its easy to solve. First, find the .zshrc file on your pc. Mine was at: `C:\Users\Wasknijper\.babun\cygwin\home\Wasknijper`
+
+In the file, find line 52.
+It probably looks something like this: `plugins=(git)`
+
+So to use meteor, just add meteor after git, or any other plugin you might find like so:
+`plugins=(git meteor)`
+
+Now try to run the meteor command in your terminal. If you get something like: You're not in a meteor project directory your set. Now you can restart the terminal and run the start file and be on your way.
+
+If you get command not found: meteor, then its because you need to run it with the extention .bat.
+
+
+##Step 5(Optional): Adding the .bat extention to the start file in the project
+The project uses the meteor command, but you might need to run it with the extention .bat. So we'll add it to the start file in the main directory of part-up.
+
+Look for this part (Lines 55-66):
+```javascript
+  if [ "$CHECKOUT" ]; then
+
+    if [ ! -d "$METEOR_SRC" ]; then
+      echo "Error: To run from a git checkout of meteor, please set the METEOR_SRC env variable to a valid meteor source folder."
+      exit 1;
+    fi
+
+    echo "Using a Meteor git checkout."
+    METEOR="$METEOR_SRC/meteor"
+  else
+    METEOR="meteor"
+  fi
+```
+
+and add the extention to the METEOR declarations like so:
+```javascript
+  if [ "$CHECKOUT" ]; then
+
+    if [ ! -d "$METEOR_SRC" ]; then
+      echo "Error: To run from a git checkout of meteor, please set the METEOR_SRC env variable to a valid meteor source folder."
+      exit 1;
+    fi
+
+    echo "Using a Meteor git checkout."
+    METEOR="$METEOR_SRC/meteor.bat"
+  else
+    METEOR="meteor.bat"
+  fi
+```
+
+After this, save and restart the terminal.
+Then go to the directory and run start.
+
+##Questions?
+Add an issue, or send me a message and i'll try to help you solve it!
