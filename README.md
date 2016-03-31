@@ -167,9 +167,9 @@ criterion.
 ##Step 1: Download Cygwin and Meteor
 
 Ansible doesnt run on windows, however, it does on Linux. With Cygwin you can run (some) native linux apps on windows. Luckily for us, Ansible is one of those apps.
-[Download here](https://www.cygwin.com/). Just install it with the basic options.
+[Download here](https://www.cygwin.com/). Install it with the following plugins: Net, Python, Devel, Editors, Base.
 
-Now, I'm not a fan on the cygwin terminal, so I also downloaded [babun](http://babun.github.io/). This is optional, so everything should work if you don't.
+Now, I'm not a fan on the cygwin terminal, so I also downloaded [babun](http://babun.github.io/). This is optional, so everything should work if you don't, but you might start crying in frustration of the cygwin terminal.
 
 Also, since its a meteor app, having that installed in necesarry too.
 
