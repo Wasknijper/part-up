@@ -1,5 +1,5 @@
 Meteor.routeComposite = function(route, callback) {
-    Router.route(route, {where: 'server'}).get(function() {
+    Router.route(route, {where: 'server', waitOn: function(){return Meteor.subscribe(route)}, fastRender: true}).get(function() {
         var request = this.request;
         var response = this.response;
         var params = this.params;
