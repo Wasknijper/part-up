@@ -1,4 +1,0 @@
-[default]
-aws_access_key_id = {{ aws.access_key_id }}
-aws_secret_access_key = {{ aws.secret_access_key }}
-region = {{ aws.default_region }}

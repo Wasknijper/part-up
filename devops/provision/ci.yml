@@ -1,8 +1,0 @@
----
-- hosts: ciservers
-  gather_facts: yes
-  remote_user: root
-  sudo: yes
-  roles:
-    - docker
-    - ci

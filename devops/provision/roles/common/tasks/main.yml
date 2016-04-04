@@ -1,7 +1,0 @@
----
-- include: apt.yml
-- include: ufw.yml
-- include: timezone.yml
-
-- include: newrelic.yml
-  when: common.newrelic.license_key

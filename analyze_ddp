@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# This script can be used to watch Meteor's DDP connection
-# Run this script, then run the following command to start the application:
-# DDP_DEFAULT_CONNECTION_URL=http://localhost:3030 ./start
-
-npm install -g ddp-analyzer
-ddp-analyzer-proxy

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-cp env.sh-encrypted env.sh-decrypting
-ansible-vault decrypt env.sh-decrypting
-mv env.sh-decrypting env.sh
-
-ansible-vault decrypt --output=env env-encrypted

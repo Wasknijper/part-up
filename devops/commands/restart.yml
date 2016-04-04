@@ -1,8 +1,0 @@
----
-- hosts: appservers
-  gather_facts: no
-  remote_user: root
-  sudo: yes
-  tasks:
-   - name: restart
-     shell: docker restart app

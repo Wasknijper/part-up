@@ -1,8 +1,0 @@
-[ciservers]
-178.62.56.4 name=partup-ci-london1-01
-
-[ci:children]
-ciservers
-
-[ci:vars]
-server_environment_name=ci

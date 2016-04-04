@@ -1,4 +1,0 @@
----
-- name: java | install openjdk 7
-  apt: package=openjdk-7-jdk state=latest update_cache=yes
-  tags: java

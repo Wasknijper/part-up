@@ -1,4 +1,0 @@
----
-- name: timezone | set
-  shell: timedatectl set-timezone '{{ common.timezone }}'
-  tags: timezone

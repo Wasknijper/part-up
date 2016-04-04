@@ -1,8 +1,0 @@
----
-- name: ufw | allow forwarding
-  lineinfile: dest=/etc/default/ufw regexp=^DEFAULT_FORWARD_POLICY= line=DEFAULT_FORWARD_POLICY="ACCEPT"
-  tags: ufw
-
-- name: ufw | reload
-  shell: ufw reload
-  tags: ufw

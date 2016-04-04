@@ -1,6 +1,0 @@
-<template name="Video">
-    <div class="pu-video">
-        {{#unless play}}<figure style="background-image:url({{poster}});" alt="" data-play></figure>{{/unless}}
-        {{#if play}}<iframe src="{{url}}?rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>{{/if}}
-    </div>
-</template>

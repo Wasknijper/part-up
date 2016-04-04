@@ -1,4 +1,0 @@
----
-- name: zip | install zip
-  apt: package=zip state=latest update_cache=yes
-  tags: zip

@@ -1,7 +1,0 @@
----
-common:
-  timezone: 'Europe\Amsterdam'
-  apt_packages: []
-
-  newrelic:
-    license_key: false

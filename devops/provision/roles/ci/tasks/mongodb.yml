@@ -1,4 +1,0 @@
----
-- name: mongodb | install mongodb-clients
-  apt: package=mongodb-clients state=latest update_cache=yes
-  tags: mongodb
