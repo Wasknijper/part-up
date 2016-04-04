@@ -1,9 +1,9 @@
------
 
 ##Aanpassingen
 
 ###Alle headings op de homepagina geordend. Geen h4 met genested h2's meer. 
 Voor:
+![heading voor](headings-voor.png)
 
 Na:
 
