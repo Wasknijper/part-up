@@ -3,17 +3,20 @@
 
 ###Alle headings op de homepagina geordend. Geen h4 met genested h2's meer. 
 Voor:
-![heading voor](headings-voor.png)
+![heading voor](headings-voor.PNG)
 
 Na:
+![heading na](headings-na.PNG)
 
 ###Outlines op knoppen en menu items weer zichtbaar
 Dit verbeterd de user experience voor alle gebruikers die met de tab-toetsten moeten werken.
 
 ###Kleur contrast van highlight op homepagina verbeterd
 Voor:
+![contrast voor](contrast-voor.PNG)
 
 Na: 
+![contrast voor](contrast-na.PNG)
 
 ###Dropdowns klappen open op focus
 Hierdoor kan je makkelijker erdoor heen tabben. 
