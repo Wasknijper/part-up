@@ -16,7 +16,7 @@ Voor:
 ![contrast voor](contrast-voor.PNG)
 
 Na: 
-![contrast voor](contrast-na.PNG)
+![contrast na](contrast-na.png)
 
 ###Dropdowns klappen open op focus
 Hierdoor kan je makkelijker erdoor heen tabben. 
